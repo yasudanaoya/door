@@ -13,6 +13,7 @@
     "storybook": "start-storybook -p 6006",
     "build:storybook": "yarn build-storybook -o ./docs",
     "snapshot": "jest --updateSnapshot",
+    "hygen": "hygen generate component",
     "test": "jest"
   },
   "lint-staged": {
