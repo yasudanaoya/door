@@ -70,6 +70,10 @@
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^21.0.0",
     "ts-jest": "^26.5.4",
-    "vue-jest": "^3.0.4"
+    "vue-jest": "^3.0.4",
+    "vue-loader": "^15.2.1"
+  },
+  "resolutions": {
+    "vue-loader": "^16.0.0"
   }
 }
