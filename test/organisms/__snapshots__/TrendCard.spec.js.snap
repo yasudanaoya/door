@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TrendCard snapshot 1`] = `
+<card-stub>
+  <div
+    class="tag-wrapper"
+  >
+    <v-chip-stub
+      active="true"
+      activeclass=""
+      class="tag"
+      closeicon="$delete"
+      closelabel="$vuetify.close"
+      color="red"
+      filtericon="$complete"
+      tag="span"
+      textcolor="white"
+    >
+      tag1
+    </v-chip-stub>
+    <v-chip-stub
+      active="true"
+      activeclass=""
+      class="tag"
+      closeicon="$delete"
+      closelabel="$vuetify.close"
+      color="blue"
+      filtericon="$complete"
+      tag="span"
+      textcolor="white"
+    >
+      tag2
+    </v-chip-stub>
+  </div>
+  <p
+    class="comment"
+  >
+    test
+  </p>
+</card-stub>
+`;
