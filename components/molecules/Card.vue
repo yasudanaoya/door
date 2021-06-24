@@ -1,5 +1,5 @@
 <template lang="pug">
-  .card-wrapper
+  v-card.card-wrapper
     slot
 </template>
 
@@ -13,6 +13,7 @@ export default defineComponent({})
 .card-wrapper {
   height: 100px;
   width: 200px;
+  padding: 5px;
   border: 1px solid black;
   border-radius: 20px;
 }
