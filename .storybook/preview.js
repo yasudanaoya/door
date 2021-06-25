@@ -16,13 +16,11 @@ addDecorator(() => ({
     },
   }),
   template: `
-    <decorator>
-      <v-app slot="story">
-        <v-content>
-          <story/>
-        </v-content>
-      </v-app>
-    </decorator>
+    <v-app slot="story">
+      <v-content>
+        <story/>
+      </v-content>
+    </v-app>
   `,
 }))
 
