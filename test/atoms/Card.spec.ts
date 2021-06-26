@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import Component from '~/components/molecules/Card'
+import Component from '~/components/atoms/Card.vue'
 
 describe('Card', () => {
   test('snapshot', () => {
