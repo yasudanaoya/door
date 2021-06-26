@@ -1,9 +1,9 @@
 ---
-to: stories/<%= level %>/<%= h.changeCase.pascalCase(name) %>.stories.js
+to: stories/<%= level %>/<%= h.changeCase.pascalCase(name) %>.stories.ts
 ---
 import { withKnobs } from "@storybook/addon-knobs"
 import { action } from "@storybook/addon-actions"
-import <%= h.changeCase.pascalCase(name) %> from "../../components/<%= level %>/<%= h.changeCase.pascalCase(name) %>"
+import <%= h.changeCase.pascalCase(name) %> from "../../components/<%= level %>/<%= h.changeCase.pascalCase(name) %>.vue"
 
 export default {
   title: "<%= h.changeCase.pascalCase(level) %>/<%= h.changeCase.pascalCase(name) %>",

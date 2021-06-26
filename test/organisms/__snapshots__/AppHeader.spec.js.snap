@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppHeader snapshot 1`] = `
+<v-toolbar-stub
+  extensionheight="48"
+  src=""
+  tag="header"
+>
+  <v-spacer-stub />
+  <div
+    class="tabs"
+  >
+    <div
+      class="tab"
+    >
+      <v-btn-stub
+        activeclass=""
+        tag="button"
+        type="button"
+      >
+        <v-icon-stub
+          left="left"
+        >
+          mdi-home
+        </v-icon-stub>
+        Home
+      </v-btn-stub>
+    </div>
+  </div>
+  <v-spacer-stub />
+  <v-icon-stub
+    color="green darken-2"
+    large="large"
+  >
+    mdi-account-circle
+  </v-icon-stub>
+</v-toolbar-stub>
+`;
