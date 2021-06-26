@@ -13,7 +13,7 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from '@vue/composition-api'
-import Card from '../molecules/Card.vue'
+import Card from '../atoms/Card.vue'
 
 type Tag = {
   title: string

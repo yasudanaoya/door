@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
-import Component from '~/components/organisms/TrendCard'
+import Component from '~/components/organisms/TrendCard.vue'
 
 describe('TrendCard', () => {
   test('snapshot', () => {

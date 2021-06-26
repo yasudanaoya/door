@@ -1,8 +1,8 @@
 import { withKnobs } from '@storybook/addon-knobs'
-import Card from '../../components/molecules/Card.vue'
+import Card from '../../components/atoms/Card.vue'
 
 export default {
-  title: 'Molecules/Card',
+  title: 'Atoms/Card',
   decorators: [withKnobs],
 }
 
