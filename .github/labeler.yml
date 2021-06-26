@@ -1,0 +1,14 @@
+automerge:
+  - '*'
+
+chore:
+  - '**/*.yml'
+  - 'nuxt.config.ts'
+  - '.*/**/*'
+
+component:
+  - 'components/**/*'
+
+test: 
+  - 'test'
+
