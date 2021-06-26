@@ -1,5 +1,5 @@
 automerge:
-  - '*'
+  - '**'
 
 chore:
   - '**/*.yml'
