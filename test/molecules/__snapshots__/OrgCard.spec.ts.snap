@@ -13,19 +13,23 @@ exports[`OrgCard snapshot 1`] = `
     <div
       class="d-flex flex-no-wrap justify-space-between"
     >
-      <v-avatar-stub
-        class="img-wrapper ma-3"
-        size="100"
-        tile="true"
+      <div
+        class="img-wrapper"
       >
-        <v-img-stub
-          class="org-img"
-          options="[object Object]"
-          position="center center"
-          src="https://github.githubassets.com/images/modules/open_graph/github-logo.png"
-          transition="fade-transition"
-        />
-      </v-avatar-stub>
+        <v-avatar-stub
+          class="ma-3"
+          size="100"
+          tile="true"
+        >
+          <v-img-stub
+            class="org-img"
+            options="[object Object]"
+            position="center center"
+            src="https://github.githubassets.com/images/modules/open_graph/github-logo.png"
+            transition="fade-transition"
+          />
+        </v-avatar-stub>
+      </div>
       <div>
         <v-card-title-stub>
           GitHub

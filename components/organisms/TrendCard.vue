@@ -23,13 +23,13 @@
 import { defineComponent, PropType } from '@vue/composition-api'
 import OrgCard from '../molecules/OrgCard.vue'
 
-type Tag = {
+export type Tag = {
   title: string
   color: string
   textColor: string
 }
 
-type ORG = {
+export type ORG = {
   href: string
   src: string
   title: string
