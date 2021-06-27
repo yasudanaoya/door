@@ -49,6 +49,21 @@ export const Basic = () => {
       trends: {
         default: object('trends', genTrends(10)),
       },
+      options: {
+        default: object('options', [
+          { text: 'front', value: 'front' },
+          { text: 'server', value: 'server' },
+        ]),
+      },
+      org: {
+        default: object('org', {
+          href: 'https://github.com/',
+          src: 'https://github.githubassets.com/images/modules/open_graph/github-logo.png',
+          title: 'GitHub',
+          description:
+            'GitHub is where people build software. More than 65 million people use GitHub to discover, fork, and contribute to over 200 million projects.',
+        }),
+      },
     },
     template: `
       <Trends :trends="trends" />
