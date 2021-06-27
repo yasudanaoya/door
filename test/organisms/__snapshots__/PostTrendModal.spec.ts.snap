@@ -13,7 +13,6 @@ exports[`PostTrendModal snapshot 1`] = `
     origin="center center"
     retainfocus="true"
     transition="dialog-transition"
-    value="true"
     width="auto"
   >
     <v-card-stub

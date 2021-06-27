@@ -3,7 +3,9 @@
     post-trend-modal(
       :options="options"
       :org="postOrg"
-      :showModal="showPostModal"
+      @click-cancel="$emit('click-modal-cancel')"
+      @click-post="$emit('click-modal-post')"
+      @input-url="$emit('input-modal-url', $event)"
     )
     .trend-list
       trend-card.card(
@@ -43,7 +45,7 @@ export default defineComponent({
       type: Array as PropType<Option[]>,
       required: true,
     },
-    org: {
+    postOrg: {
       type: Object as PropType<ORG>,
       required: false,
       default: () => {
@@ -54,11 +56,6 @@ export default defineComponent({
           description: '',
         }
       },
-    },
-    showPostModal: {
-      type: Boolean,
-      required: false,
-      default: false,
     },
   },
 })
