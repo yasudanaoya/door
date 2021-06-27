@@ -38,15 +38,16 @@ export const genTrend = (id: number) => {
   }
 }
 
+export const genTrends = (length: number) => {
+  return new Array(length).fill(null).map((_, i) => genTrend(i))
+}
+
 export const Basic = () => {
   return {
     components: { Trends },
     props: {
       trends: {
-        default: object(
-          'trends',
-          new Array(10).fill(null).map((_, i) => genTrend(i))
-        ),
+        default: object('trends', genTrends(10)),
       },
     },
     template: `
