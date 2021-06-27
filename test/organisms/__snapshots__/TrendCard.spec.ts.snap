@@ -1,10 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TrendCard snapshot 1`] = `
-<card-stub>
-  <div
-    class="tag-wrapper"
-  >
+<v-card-stub
+  loaderheight="4"
+  tag="div"
+>
+  <template>
+    <v-progress-linear-stub
+      active="true"
+      buffervalue="100"
+      color="primary"
+      height="10"
+      indeterminate="true"
+      value="0"
+    />
+  </template>
+  <v-card-text-stub>
     <v-chip-stub
       active="true"
       activeclass=""
@@ -31,11 +42,19 @@ exports[`TrendCard snapshot 1`] = `
     >
       tag2
     </v-chip-stub>
-  </div>
-  <p
-    class="comment"
-  >
-    test
-  </p>
-</card-stub>
+    <p
+      class="comment"
+    >
+      test
+    </p>
+    <v-card-text-stub>
+      <org-card-stub
+        description="GitHub is where people build software. More than 65 million people use GitHub to discover, fork, and contribute to over 200 million projects."
+        href="https://github.com/"
+        src="https://github.githubassets.com/images/modules/open_graph/github-logo.png"
+        title="GitHub"
+      />
+    </v-card-text-stub>
+  </v-card-text-stub>
+</v-card-stub>
 `;

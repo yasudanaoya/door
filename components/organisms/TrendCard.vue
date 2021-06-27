@@ -1,19 +1,32 @@
 <template lang="pug">
-  card
-    .tag-wrapper
+  v-card
+    template(slot="progress")
+      v-progress-linear(
+        height="10"
+        indeterminate
+      )
+    v-card-text
       v-chip.tag(
         v-for="tag in tags"
         :color="tag.color"
         :text-color="tag.textColor"
+        :key="tag.title"
       )
         | {{ tag.title }}
-    p.comment
-      | {{ comment }}
+      p.comment
+        | {{ comment }}
+      v-card-text
+        org-card(
+          :href="org.href"
+          :src="org.src"
+          :title="org.title"
+          :description="org.description"
+        )
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType } from '@vue/composition-api'
-import Card from '../atoms/Card.vue'
+import OrgCard from '../molecules/OrgCard.vue'
 
 type Tag = {
   title: string
@@ -21,9 +34,16 @@ type Tag = {
   textColor: string
 }
 
+type ORG = {
+  href: string
+  src: string
+  title: string
+  description: string
+}
+
 export default defineComponent({
   components: {
-    Card,
+    OrgCard,
   },
 
   props: {
@@ -35,6 +55,10 @@ export default defineComponent({
       type: String,
       required: false,
       default: '',
+    },
+    org: {
+      type: Object as PropType<ORG>,
+      required: true,
     },
   },
 })

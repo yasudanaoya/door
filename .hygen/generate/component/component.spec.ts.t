@@ -1,5 +1,5 @@
 ---
-to: test/<%= level %>/<%= h.changeCase.pascalCase(name) %>.spec.js
+to: test/<%= level %>/<%= h.changeCase.pascalCase(name) %>.spec.ts
 ---
 import { createLocalVue, shallowMount } from '@vue/test-utils'
 import VueCompositionApi from '@vue/composition-api'

@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrgCard snapshot 1`] = `
+<a
+  class="org-card"
+  href="https://github.com/"
+  target="_blank"
+>
+  <v-card-stub
+    loaderheight="4"
+    tag="div"
+  >
+    <div
+      class="d-flex flex-no-wrap justify-space-between"
+    >
+      <v-avatar-stub
+        class="img-wrapper ma-3"
+        size="100"
+        tile="true"
+      >
+        <v-img-stub
+          class="org-img"
+          options="[object Object]"
+          position="center center"
+          src="https://github.githubassets.com/images/modules/open_graph/github-logo.png"
+          transition="fade-transition"
+        />
+      </v-avatar-stub>
+      <div>
+        <v-card-title-stub>
+          GitHub
+        </v-card-title-stub>
+        <v-card-subtitle-stub>
+          GitHub is where people build software. More than 65 million people use GitHub to discover, fork, and contribute to over 200 million projects.
+        </v-card-subtitle-stub>
+      </div>
+    </div>
+  </v-card-stub>
+</a>
+`;
