@@ -2,8 +2,8 @@
   trends-template(
     :trends="state.trends"
     :options="[]"
-    :post-org="state.postORG"
-    @click-modal-postOrg="handleClickModalPost"
+    :post-ogp="state.postOgp"
+    @click-modal-postOgp="handleClickModalPost"
     @input-modal-url="handleInputModalURL"
   )
 </template>
@@ -12,13 +12,13 @@
 import { defineComponent, reactive } from '@vue/composition-api'
 import { encodeURL } from 'js-base64'
 import TrendsStore from '../store/trends'
-import { ORG } from '~/components/organisms/TrendCard.vue'
+import { Ogp } from '~/components/organisms/TrendCard.vue'
 import TrendsTemplate from '~/components/templates/Trends.vue'
 import { Trend } from '~/assets/types/api'
 
 type State = {
   trends: Trend[]
-  postORG: ORG
+  postOgp: Ogp
 }
 
 export default defineComponent({
@@ -31,7 +31,7 @@ export default defineComponent({
 
     const state = reactive<State>({
       trends: store.trends,
-      postORG: {
+      postOgp: {
         src: '',
         title: '',
         description: '',
@@ -41,10 +41,10 @@ export default defineComponent({
 
     const getORG = async (url: string) => {
       try {
-        const response: ORG = await root.$axios
+        const response: Ogp = await root.$axios
           .get(`/api/ogp/?url=${encodeURL(url)}`)
           .then((res) => res.data)
-        state.postORG = response
+        state.postOgp = response
       } catch (err) {
         console.error(err)
       }

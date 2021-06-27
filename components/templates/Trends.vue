@@ -1,8 +1,8 @@
 <template lang="pug">
-  v-content.trend-root
+  v-main.trend-root
     post-trend-modal(
       :options="options"
-      :org="postOrg"
+      :ogp="postOgp"
       @click-cancel="$emit('click-modal-cancel')"
       @click-post="$emit('click-modal-post')"
       @input-url="$emit('input-modal-url', $event)"
@@ -13,19 +13,19 @@
         :key="trendCard.id"
         :tags="trendCard.tags"
         :comment="trendCard.comment"
-        :org="trendCard.org"
+        :ogp="trendCard.ogp"
       )
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType } from '@vue/composition-api'
-import TrendCard, { Tag, ORG } from '../organisms/TrendCard.vue'
+import TrendCard, { Tag, Ogp } from '../organisms/TrendCard.vue'
 import PostTrendModal, { Option } from '../organisms/PostTrendModal.vue'
 
 export type Trend = {
   id: string
   tags: Tag[]
-  org: ORG
+  ogp: Ogp
   comment: string
 }
 
@@ -45,8 +45,8 @@ export default defineComponent({
       type: Array as PropType<Option[]>,
       required: true,
     },
-    postOrg: {
-      type: Object as PropType<ORG>,
+    postOgp: {
+      type: Object as PropType<Ogp>,
       required: false,
       default: () => {
         return {

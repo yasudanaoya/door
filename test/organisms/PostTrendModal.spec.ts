@@ -15,7 +15,7 @@ describe('PostTrendModal', () => {
           { text: 'front', value: 'front' },
           { text: 'server', value: 'server' },
         ],
-        org: {
+        ogp: {
           href: 'https://github.com/',
           src: 'https://github.githubassets.com/images/modules/open_graph/github-logo.png',
           title: 'GitHub',

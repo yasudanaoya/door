@@ -1,14 +1,14 @@
 import { text, withKnobs } from '@storybook/addon-knobs'
-import OrgCard from '../../components/molecules/OrgCard.vue'
+import OgpCard from '../../components/molecules/OgpCard.vue'
 
 export default {
-  title: 'Molecules/OrgCard',
+  title: 'Molecules/OgpCard',
   decorators: [withKnobs],
 }
 
 export const Basic = () => {
   return {
-    components: { OrgCard },
+    components: { OgpCard },
     props: {
       href: {
         default: text('href', 'https://github.com/'),
@@ -30,7 +30,7 @@ export const Basic = () => {
       },
     },
     template: `
-      <OrgCard :href="href" :src="src" :title="title" :description="description" />
+      <OgpCard :href="href" :src="src" :title="title" :description="description" />
     `,
   }
 }

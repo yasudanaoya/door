@@ -10,7 +10,7 @@ export default function trendsStore() {
     trends: [
       {
         id: '0',
-        org: {
+        ogp: {
           href: 'https://github.com/',
           src: 'https://github.githubassets.com/images/modules/open_graph/github-logo.png',
           title: 'GitHub',
@@ -35,7 +35,7 @@ export default function trendsStore() {
       },
       {
         id: '1',
-        org: {
+        ogp: {
           href: 'https://github.com/',
           src: 'https://github.githubassets.com/images/modules/open_graph/github-logo.png',
           title: 'GitHub',
@@ -60,7 +60,7 @@ export default function trendsStore() {
       },
       {
         id: '2',
-        org: {
+        ogp: {
           href: 'https://github.com/',
           src: 'https://github.githubassets.com/images/modules/open_graph/github-logo.png',
           title: 'GitHub',
@@ -85,7 +85,7 @@ export default function trendsStore() {
       },
       {
         id: '3',
-        org: {
+        ogp: {
           href: 'https://github.com/',
           src: 'https://github.githubassets.com/images/modules/open_graph/github-logo.png',
           title: 'GitHub',

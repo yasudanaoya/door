@@ -42,19 +42,19 @@
                   @click:clear="handleClickClear"
                   @input="handleInputURL"
                 )
-              v-col.org(
+              v-col.ogp(
                 cols="6"
               ) 
                 v-progress-circular(
                   v-if="state.isLoading"
                   indeterminate
                 )
-                org-card(
+                ogp-card(
                   v-else-if="form.url"
-                  :href="org.href"
-                  :src="org.src"
-                  :title="org.title"
-                  :description="org.description"
+                  :href="ogp.href"
+                  :src="ogp.src"
+                  :title="ogp.title"
+                  :description="ogp.description"
                 )
               v-col(
                 cols="12"
@@ -89,14 +89,14 @@ import {
   reactive,
   watch,
 } from '@vue/composition-api'
-import OrgCard from '../molecules/OrgCard.vue'
+import OgpCard from '../molecules/OgpCard.vue'
 
 export type Option = {
   text: string
   value: string
 }
 
-type ORG = {
+type Ogp = {
   href: string
   src: string
   title: string
@@ -116,7 +116,7 @@ type Form = {
 
 export default defineComponent({
   components: {
-    OrgCard,
+    OgpCard,
   },
 
   props: {
@@ -124,8 +124,8 @@ export default defineComponent({
       type: Array as PropType<Option[]>,
       required: true,
     },
-    org: {
-      type: Object as PropType<ORG>,
+    ogp: {
+      type: Object as PropType<Ogp>,
       required: false,
       default: () => {
         return {
@@ -151,9 +151,9 @@ export default defineComponent({
     })
 
     watch(
-      () => peops.org.src,
+      () => peops.ogp.src,
       () => {
-        if (peops.org.src) {
+        if (peops.ogp.src) {
           state.isLoading = false
         }
       }
@@ -185,7 +185,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.org {
+.ogp {
   display: flex;
   justify-content: center;
   align-items: center;

@@ -19,8 +19,8 @@ export const Basic = () => {
       comment: {
         default: text('comment', 'とてもお勧めできるサイトです。'),
       },
-      org: {
-        default: object('org', {
+      ogp: {
+        default: object('ogp', {
           href: 'https://github.com/',
           src: 'https://github.githubassets.com/images/modules/open_graph/github-logo.png',
           title: 'GitHub',
@@ -30,7 +30,7 @@ export const Basic = () => {
       },
     },
     template: `
-      <TrendCard :tags="tags" :comment="comment" :org="org" />
+      <TrendCard :tags="tags" :comment="comment" :ogp="ogp" />
     `,
   }
 }

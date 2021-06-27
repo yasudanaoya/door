@@ -1,5 +1,5 @@
 <template lang="pug">
-  a.org-card(
+  a.ogp-card(
     :href="href"
     target="_blank"
   )
@@ -11,7 +11,7 @@
             size="100"
             tile
           )
-            v-img.org-img(
+            v-img.ogp-img(
               :src="src"
             )
         div
@@ -49,7 +49,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-.org-card {
+.ogp-card {
   text-decoration: none;
 
   .img-wrapper {

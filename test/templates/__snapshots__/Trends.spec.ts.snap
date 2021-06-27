@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Trends snapshot 1`] = `
-<v-content-stub
+<v-main-stub
   class="trend-root"
-  org="[object Object]"
+  ogp="[object Object]"
   tag="main"
 >
   <post-trend-modal-stub
+    ogp="[object Object]"
     options="[object Object],[object Object]"
-    org="[object Object]"
   />
   <div
     class="trend-list"
@@ -16,21 +16,21 @@ exports[`Trends snapshot 1`] = `
     <trend-card-stub
       class="card"
       comment="Nuxt.js is amazing"
-      org="[object Object]"
+      ogp="[object Object]"
       tags="[object Object],[object Object]"
     />
     <trend-card-stub
       class="card"
       comment="Nuxt.js is amazing"
-      org="[object Object]"
+      ogp="[object Object]"
       tags="[object Object],[object Object]"
     />
     <trend-card-stub
       class="card"
       comment="Nuxt.js is amazing"
-      org="[object Object]"
+      ogp="[object Object]"
       tags="[object Object],[object Object]"
     />
   </div>
-</v-content-stub>
+</v-main-stub>
 `;
