@@ -5,14 +5,15 @@
   )
     v-card
       .d-flex.flex-no-wrap.justify-space-between
-        v-avatar.img-wrapper(
-          class="ma-3"
-          size="100"
-          tile
-        )
-          v-img.org-img(
-            :src="src"
+        .img-wrapper
+          v-avatar(
+            class="ma-3"
+            size="100"
+            tile
           )
+            v-img.org-img(
+              :src="src"
+            )
         div
           v-card-title(v-text="title")
           v-card-subtitle(v-text="description")
@@ -50,5 +51,10 @@ export default defineComponent({
 <style lang="scss">
 .org-card {
   text-decoration: none;
+
+  .img-wrapper {
+    display: flex;
+    align-items: center;
+  }
 }
 </style>
