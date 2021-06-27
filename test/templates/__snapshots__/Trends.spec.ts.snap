@@ -3,6 +3,7 @@
 exports[`Trends snapshot 1`] = `
 <v-content-stub
   class="trend-root"
+  org="[object Object]"
   tag="main"
 >
   <post-trend-modal-stub

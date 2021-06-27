@@ -3,7 +3,7 @@
     justify='center'
   )
     v-dialog(
-      v-model="showModal"
+      v-model="state.showModal"
     )
       template(
         v-slot:activator="{ on, attrs }"
@@ -39,6 +39,7 @@
                   label="URL*"
                   required
                   clearable
+                  @click:clear="handleClickClear"
                   @input="handleInputURL"
                 )
               v-col.org(
@@ -71,12 +72,12 @@
             v-btn(
               color="green darken-1"
               text
-              @click="$emit('click-cancel')"
+              @click="state.showModal = false"
             ) キャンセル
             v-btn(
               color="green darken-1"
               text
-              @click="$emit('click-post')"
+              @click="handleClickPost"
             ) 投稿
 
 </template>
@@ -104,6 +105,7 @@ type ORG = {
 
 type State = {
   isLoading: boolean
+  showModal: boolean
 }
 
 type Form = {
@@ -134,16 +136,12 @@ export default defineComponent({
         }
       },
     },
-    showModal: {
-      type: Boolean,
-      required: false,
-      default: false,
-    },
   },
 
   setup(peops, { emit }) {
     const state = reactive<State>({
       isLoading: false,
+      showModal: false,
     })
 
     const form = reactive<Form>({
@@ -161,6 +159,15 @@ export default defineComponent({
       }
     )
 
+    const handleClickClear = () => {
+      state.isLoading = false
+    }
+
+    const handleClickPost = () => {
+      state.showModal = false
+      emit('click-post')
+    }
+
     const handleInputURL = (value: string) => {
       state.isLoading = true
       emit('input-url', value)
@@ -170,6 +177,8 @@ export default defineComponent({
       state,
       form,
       handleInputURL,
+      handleClickPost,
+      handleClickClear,
     }
   },
 })

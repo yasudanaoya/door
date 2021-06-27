@@ -22,7 +22,6 @@ describe('PostTrendModal', () => {
           description:
             'GitHub is where people build software. More than 65 million people use GitHub to discover, fork, and contribute to over 200 million projects.',
         },
-        showModal: true,
       },
       localVue,
     })
