@@ -30,7 +30,7 @@ export const genORG = () => {
 export const genTrend = (id: number) => {
   return {
     id: String(id),
-    org: genORG(),
+    ogp: genORG(),
     tags: new Array(2)
       .fill(null)
       .map((_, i) => genTag(i % 2 === 0 ? 'red' : 'blue')),
@@ -55,8 +55,8 @@ export const Basic = () => {
           { text: 'server', value: 'server' },
         ]),
       },
-      org: {
-        default: object('org', {
+      ogp: {
+        default: object('ogp', {
           href: 'https://github.com/',
           src: 'https://github.githubassets.com/images/modules/open_graph/github-logo.png',
           title: 'GitHub',

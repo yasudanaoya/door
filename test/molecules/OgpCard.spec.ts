@@ -1,13 +1,13 @@
 import { createLocalVue, shallowMount } from '@vue/test-utils'
 import VueCompositionApi from '@vue/composition-api'
 import Vuetify from 'vuetify'
-import Component from '~/components/molecules/OrgCard.vue'
+import Component from '~/components/molecules/OgpCard.vue'
 
 const localVue = createLocalVue()
 localVue.use(VueCompositionApi)
 localVue.use(Vuetify)
 
-describe('OrgCard', () => {
+describe('OgpCard', () => {
   test('snapshot', () => {
     const wrapper = shallowMount(Component, {
       propsData: {

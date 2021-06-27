@@ -18,9 +18,9 @@ addDecorator(() => ({
   }),
   template: `
     <v-app slot="story">
-      <v-content>
+      <v-main>
         <story/>
-      </v-content>
+      </v-main>
     </v-app>
   `,
 }))

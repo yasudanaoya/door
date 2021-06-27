@@ -11,17 +11,18 @@
       p.comment
         | {{ comment }}
       v-card-text
-        org-card(
-          :href="org.href"
-          :src="org.src"
-          :title="org.title"
-          :description="org.description"
+        ogp-card(
+          :href="ogp.href"
+          :src="ogp.src"
+          :title="ogp.title"
+          :description="ogp.description"
         )
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType } from '@vue/composition-api'
-import OrgCard from '../molecules/OrgCard.vue'
+import OgpCard from '../molecules/OgpCard.vue'
+import { OGP } from '~/assets/types/app'
 
 export type Tag = {
   title: string
@@ -29,16 +30,9 @@ export type Tag = {
   textColor: string
 }
 
-export type ORG = {
-  href: string
-  src: string
-  title: string
-  description: string
-}
-
 export default defineComponent({
   components: {
-    OrgCard,
+    OgpCard,
   },
 
   props: {
@@ -51,8 +45,8 @@ export default defineComponent({
       required: false,
       default: '',
     },
-    org: {
-      type: Object as PropType<ORG>,
+    ogp: {
+      type: Object as PropType<OGP>,
       required: true,
     },
   },

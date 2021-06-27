@@ -84,7 +84,7 @@ exports[`PostTrendModal snapshot 1`] = `
               />
             </v-col-stub>
             <v-col-stub
-              class="org"
+              class="ogp"
               cols="6"
               tag="div"
             >

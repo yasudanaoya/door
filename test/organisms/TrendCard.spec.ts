@@ -10,7 +10,7 @@ describe('TrendCard', () => {
           { title: 'tag2', color: 'blue', textColor: 'white' },
         ],
         comment: 'test',
-        org: {
+        ogp: {
           href: 'https://github.com/',
           src: 'https://github.githubassets.com/images/modules/open_graph/github-logo.png',
           title: 'GitHub',
