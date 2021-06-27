@@ -5,7 +5,7 @@ to: components/<%= level %>/<%= h.changeCase.pascalCase(name) %>.vue
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from "@vue/composition-api"
+import { defineComponent, PropType } from '@vue/composition-api'
 
 export default defineComponent({})
 </script>
