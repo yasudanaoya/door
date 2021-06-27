@@ -21,13 +21,8 @@
 
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api'
-import Card from '../atoms/Card.vue'
 
 export default defineComponent({
-  components: {
-    Card,
-  },
-
   props: {
     href: {
       type: String,
