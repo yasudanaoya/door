@@ -5,16 +5,6 @@ exports[`TrendCard snapshot 1`] = `
   loaderheight="4"
   tag="div"
 >
-  <template>
-    <v-progress-linear-stub
-      active="true"
-      buffervalue="100"
-      color="primary"
-      height="10"
-      indeterminate="true"
-      value="0"
-    />
-  </template>
   <v-card-text-stub>
     <v-chip-stub
       active="true"

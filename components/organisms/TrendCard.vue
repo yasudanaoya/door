@@ -1,10 +1,5 @@
 <template lang="pug">
   v-card
-    template(slot="progress")
-      v-progress-linear(
-        height="10"
-        indeterminate
-      )
     v-card-text
       v-chip.tag(
         v-for="tag in tags"
