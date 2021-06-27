@@ -47,8 +47,6 @@ export default defineComponent({
         state.postORG = response
       } catch (err) {
         console.error(err)
-      } finally {
-        console.log(state.postORG)
       }
     }
 
@@ -57,7 +55,6 @@ export default defineComponent({
     }
 
     const handleInputModalURL = (url: string) => {
-      console.log(url)
       if (url) {
         getORG(url)
       }
