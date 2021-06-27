@@ -1,6 +1,7 @@
 <template lang="pug">
   trends-template(
     :trends="trends"
+    :options="[]"
   )
 </template>
 
