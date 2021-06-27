@@ -90,17 +90,11 @@ import {
   watch,
 } from '@vue/composition-api'
 import OgpCard from '../molecules/OgpCard.vue'
+import { OGP } from '~/assets/types/app'
 
 export type Option = {
   text: string
   value: string
-}
-
-type Ogp = {
-  href: string
-  src: string
-  title: string
-  description: string
 }
 
 type State = {
@@ -125,7 +119,7 @@ export default defineComponent({
       required: true,
     },
     ogp: {
-      type: Object as PropType<Ogp>,
+      type: Object as PropType<OGP>,
       required: false,
       default: () => {
         return {

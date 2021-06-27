@@ -19,13 +19,14 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from '@vue/composition-api'
-import TrendCard, { Tag, Ogp } from '../organisms/TrendCard.vue'
+import TrendCard, { Tag } from '../organisms/TrendCard.vue'
 import PostTrendModal, { Option } from '../organisms/PostTrendModal.vue'
+import { OGP } from '~/assets/types/app'
 
 export type Trend = {
   id: string
   tags: Tag[]
-  ogp: Ogp
+  ogp: OGP
   comment: string
 }
 
@@ -46,7 +47,7 @@ export default defineComponent({
       required: true,
     },
     postOgp: {
-      type: Object as PropType<Ogp>,
+      type: Object as PropType<OGP>,
       required: false,
       default: () => {
         return {

@@ -22,18 +22,12 @@
 <script lang="ts">
 import { defineComponent, PropType } from '@vue/composition-api'
 import OgpCard from '../molecules/OgpCard.vue'
+import { OGP } from '~/assets/types/app'
 
 export type Tag = {
   title: string
   color: string
   textColor: string
-}
-
-export type Ogp = {
-  href: string
-  src: string
-  title: string
-  description: string
 }
 
 export default defineComponent({
@@ -52,7 +46,7 @@ export default defineComponent({
       default: '',
     },
     ogp: {
-      type: Object as PropType<Ogp>,
+      type: Object as PropType<OGP>,
       required: true,
     },
   },

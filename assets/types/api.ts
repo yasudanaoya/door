@@ -5,7 +5,7 @@ export type Tag = {
   textColor: string
 }
 
-export type Ogp = {
+export type OGP = {
   href: string
   src: string
   title: string
@@ -15,6 +15,6 @@ export type Ogp = {
 export type Trend = {
   id: string
   tags: Tag[]
-  ogp: Ogp
+  ogp: OGP
   comment: string
 }

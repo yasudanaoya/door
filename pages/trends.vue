@@ -12,13 +12,13 @@
 import { defineComponent, reactive } from '@vue/composition-api'
 import { encodeURL } from 'js-base64'
 import TrendsStore from '../store/trends'
-import { Ogp } from '~/components/organisms/TrendCard.vue'
+import { OGP } from '~/assets/types/app'
 import TrendsTemplate from '~/components/templates/Trends.vue'
 import { Trend } from '~/assets/types/api'
 
 type State = {
   trends: Trend[]
-  postOgp: Ogp
+  postOgp: OGP
 }
 
 export default defineComponent({
@@ -41,7 +41,7 @@ export default defineComponent({
 
     const getORG = async (url: string) => {
       try {
-        const response: Ogp = await root.$axios
+        const response: OGP = await root.$axios
           .get(`/api/ogp/?url=${encodeURL(url)}`)
           .then((res) => res.data)
         state.postOgp = response
