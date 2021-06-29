@@ -3,6 +3,8 @@ export type Tag = {
   title: string
   color: string
   textColor: string
+  createdAt: string
+  updatedAt: string
 }
 
 export type OGP = {
@@ -10,11 +12,15 @@ export type OGP = {
   src: string
   title: string
   description: string
+  createdAt: string
+  updatedAt: string
 }
 
-export type Trend = {
+export type ResponseTrend = {
   id: string
-  tags: Tag[]
-  ogp: OGP
   comment: string
+  ogp: OGP
+  tags: Tag[]
+  createdAt: string
+  updatedAt: string
 }

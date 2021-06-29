@@ -11,10 +11,10 @@
 <script lang="ts">
 import { defineComponent, reactive } from '@vue/composition-api'
 import { encodeURL } from 'js-base64'
-import TrendsStore from '../store/trends'
-import { OGP } from '~/assets/types/app'
+import { convertAppTrend } from './presenter'
+import { OGP, Trend } from '~/assets/types/app'
 import TrendsTemplate from '~/components/templates/Trends.vue'
-import { Trend } from '~/assets/types/api'
+import { ResponseTrend } from '~/assets/types/api'
 
 type State = {
   trends: Trend[]
@@ -27,10 +27,8 @@ export default defineComponent({
   },
 
   setup(_, { root }) {
-    const store = TrendsStore()
-
     const state = reactive<State>({
-      trends: store.trends,
+      trends: [],
       postOgp: {
         src: '',
         title: '',
@@ -38,6 +36,19 @@ export default defineComponent({
         href: '',
       },
     })
+
+    const getTrends = async () => {
+      try {
+        const response: ResponseTrend[] = await root.$axios
+          .get(`/api/trends`)
+          .then((res) => res.data)
+        state.trends = convertAppTrend(response)
+      } catch (err) {
+        console.error(err)
+      }
+    }
+
+    getTrends()
 
     const getORG = async (url: string) => {
       try {
