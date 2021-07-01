@@ -1,4 +1,4 @@
-export type Tag = {
+export type ResponseTag = {
   id: string
   title: string
   color: string
@@ -20,7 +20,7 @@ export type ResponseTrend = {
   id: string
   comment: string
   ogp: OGP
-  tags: Tag[]
+  tags: ResponseTag[]
   createdAt: string
   updatedAt: string
 }

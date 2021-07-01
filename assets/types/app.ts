@@ -5,6 +5,11 @@ export type Tag = {
   textColor: string
 }
 
+export type TagOption = {
+  value: string
+  text: string
+}
+
 export type OGP = {
   href: string
   src: string

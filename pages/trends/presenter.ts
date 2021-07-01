@@ -1,5 +1,5 @@
-import { ResponseTrend } from '~/assets/types/api'
-import { Trend } from '~/assets/types/app'
+import { ResponseTrend, ResponseTag } from '~/assets/types/api'
+import { Trend, TagOption } from '~/assets/types/app'
 
 export const convertAppTrend = (apiTrends: ResponseTrend[]): Trend[] => {
   return apiTrends.map((trend) => {
@@ -20,6 +20,15 @@ export const convertAppTrend = (apiTrends: ResponseTrend[]): Trend[] => {
           textColor: tag.textColor,
         }
       }),
+    }
+  })
+}
+
+export const convertOptions = (apiTags: ResponseTag[]): TagOption[] => {
+  return apiTags.map((tag) => {
+    return {
+      value: tag.id,
+      text: tag.title,
     }
   })
 }

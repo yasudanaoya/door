@@ -90,12 +90,7 @@ import {
   watch,
 } from '@vue/composition-api'
 import OgpCard from '../molecules/OgpCard.vue'
-import { OGP } from '~/assets/types/app'
-
-export type Option = {
-  text: string
-  value: string
-}
+import { OGP, TagOption } from '~/assets/types/app'
 
 type State = {
   isLoading: boolean
@@ -108,6 +103,12 @@ type Form = {
   comment: string
 }
 
+export type Param = {
+  tags: string[]
+  ogp: OGP
+  comment: string
+}
+
 export default defineComponent({
   components: {
     OgpCard,
@@ -115,7 +116,7 @@ export default defineComponent({
 
   props: {
     options: {
-      type: Array as PropType<Option[]>,
+      type: Array as PropType<TagOption[]>,
       required: true,
     },
     ogp: {
@@ -132,7 +133,7 @@ export default defineComponent({
     },
   },
 
-  setup(peops, { emit }) {
+  setup(props, { emit }) {
     const state = reactive<State>({
       isLoading: false,
       showModal: false,
@@ -145,9 +146,9 @@ export default defineComponent({
     })
 
     watch(
-      () => peops.ogp.src,
+      () => props.ogp.src,
       () => {
-        if (peops.ogp.src) {
+        if (props.ogp.src) {
           state.isLoading = false
         }
       }
@@ -158,8 +159,13 @@ export default defineComponent({
     }
 
     const handleClickPost = () => {
+      const param: Param = {
+        tags: form.categories,
+        ogp: props.ogp,
+        comment: form.comment,
+      }
       state.showModal = false
-      emit('click-post')
+      emit('click-post', param)
     }
 
     const handleInputURL = (value: string) => {
