@@ -1,5 +1,6 @@
 import colors from 'vuetify/es5/util/colors'
 import { NuxtConfig } from '@nuxt/types'
+require('dotenv').config()
 
 const config: NuxtConfig = {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
@@ -38,6 +39,7 @@ const config: NuxtConfig = {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/dotenv',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
