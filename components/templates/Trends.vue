@@ -4,7 +4,7 @@
       :options="options"
       :ogp="postOgp"
       @click-cancel="$emit('click-modal-cancel')"
-      @click-post="$emit('click-modal-post')"
+      @click-post="$emit('click-modal-post', $event)"
       @input-url="$emit('input-modal-url', $event)"
     )
     .trend-list
@@ -20,8 +20,8 @@
 <script lang="ts">
 import { defineComponent, PropType } from '@vue/composition-api'
 import TrendCard, { Tag } from '../organisms/TrendCard.vue'
-import PostTrendModal, { Option } from '../organisms/PostTrendModal.vue'
-import { OGP } from '~/assets/types/app'
+import PostTrendModal from '../organisms/PostTrendModal.vue'
+import { OGP, TagOption } from '~/assets/types/app'
 
 export type Trend = {
   id: string
@@ -43,7 +43,7 @@ export default defineComponent({
       default: () => [],
     },
     options: {
-      type: Array as PropType<Option[]>,
+      type: Array as PropType<TagOption[]>,
       required: true,
     },
     postOgp: {
