@@ -15,7 +15,6 @@ updates:
       include: 'scope'
     labels:
       - 'dependencies'
-      - 'automerge'
     ignore:
       - dependency-name: 'node-sass'
         versions: ['5.x', '6.x']
