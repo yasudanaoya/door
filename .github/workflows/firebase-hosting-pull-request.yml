@@ -22,7 +22,6 @@ jobs:
       - run: yarn install
       - run: yarn generate:staging
 
-      - run: 'y'
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
