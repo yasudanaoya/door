@@ -55,7 +55,10 @@ const config: NuxtConfig = {
 
   proxy: {
     '/api/': {
-      target: 'http://localhost:3300/',
+      target:
+        process.env.NODE_ENV === 'production'
+          ? 'http://localhost:3300/'
+          : 'https://door-server-728fb.web.app/',
       pathRewrite: { '^/api/': '/' },
     },
   },
