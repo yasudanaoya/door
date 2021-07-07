@@ -50,7 +50,7 @@
     "@nuxtjs/vuetify": "^1.11.3",
     "@storybook/addon-actions": "^6.3.2",
     "@storybook/addon-essentials": "^6.3.2",
-    "@storybook/addon-knobs": "^6.2.9",
+    "@storybook/addon-knobs": "^6.3.0",
     "@storybook/addon-links": "^6.3.2",
     "@storybook/vue": "^6.3.1",
     "@types/jest": "^26.0.23",
