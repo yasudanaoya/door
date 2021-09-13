@@ -18,6 +18,7 @@ declare namespace Externals {
           }
         }
       }
+      login: string
     }
   }
 }
