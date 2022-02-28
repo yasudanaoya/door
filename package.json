@@ -51,7 +51,7 @@
     "@nuxtjs/stylelint-module": "^4.0.0",
     "@nuxtjs/vuetify": "^1.11.3",
     "@storybook/addon-actions": "^6.3.8",
-    "@storybook/addon-essentials": "^6.3.8",
+    "@storybook/addon-essentials": "^6.4.19",
     "@storybook/addon-knobs": "^6.2.9",
     "@storybook/addon-links": "^6.4.9",
     "@storybook/vue": "^6.4.9",
